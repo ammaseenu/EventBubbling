@@ -1,0 +1,47 @@
+Event propagation:-
+*****************
+Event propagation is a mechanism that defines how event propagate or travel
+through DOM tree to arrive at its target and what happens to it afterward
+ event propagration
+*******************
+1.capturing phase
+2.Target phase
+3.bubbling phase
+capture phase:- window-->document-->html-->body-->div-->button---target
+bubble phase:-target-->button-->div-->body-->html-->doucmnet-->window
+
+Event Capturing:-
+*****************
+its start form window to target.In this procees to face the user so many steps it allows line by line 
+In the captuirng phase,events propagate from the windows down through throughly the dom to the target node
+
+Event bubbling
+**************
+**its is oppossite to event capturing
+when we do something a particular event its comes as well what are the having at the top of present event
+it is called a hirerachial way
+if we call the child it will parent also automatically
+if we call parent it does't  come child level
+*child level to parent level---bubbling occurs
+*parent level to child level---bubbling does'n occurs
+we can revrse form the end to start taking in callback function arunmnet and pass it true
+
+Event handling:-
+*****************
+-->its just action when we performance the partiular event.
+   let event=document.getElementById('event1')
+
+            event.addEventListener('click',()=>{
+                console.log("event1 clicked"
+Event delagation
+****************
+-->for a example if one event perfromce using event handling ..on that action we can profromane and come back als after completed the task
+
+
+
+Event capturing and buubling:
+**************************
+How can stop this event perfomace from the start to end through the DOM-->eventpropagation()
+(or)How can stop this event perofroomnce from end to start through the DOM
+sometimes we have duplicates of the same events that how can we stop 
+using the stopImmediatepropgation()
